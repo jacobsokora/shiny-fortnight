@@ -12,6 +12,7 @@
 		16B8A6E920F04427001811E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B8A6E720F04427001811E3 /* Main.storyboard */; };
 		16B8A6EB20F04428001811E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B8A6EA20F04428001811E3 /* Assets.xcassets */; };
 		16B8A6EE20F04428001811E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B8A6EC20F04428001811E3 /* LaunchScreen.storyboard */; };
+		16F9409B20F85CC6008636B8 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F9409A20F85CC6008636B8 /* ColorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		16B8A6EA20F04428001811E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B8A6ED20F04428001811E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16B8A6EF20F04428001811E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F9409A20F85CC6008636B8 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				16B8A6E320F04427001811E3 /* AppDelegate.swift */,
 				16B8A6E520F04427001811E3 /* ColorsTableViewController.swift */,
 				16B8A6E720F04427001811E3 /* Main.storyboard */,
+				16F9409A20F85CC6008636B8 /* ColorViewController.swift */,
 				16B8A6EA20F04428001811E3 /* Assets.xcassets */,
 				16B8A6EC20F04428001811E3 /* LaunchScreen.storyboard */,
 				16B8A6EF20F04428001811E3 /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B8A6E620F04427001811E3 /* ColorsTableViewController.swift in Sources */,
+				16F9409B20F85CC6008636B8 /* ColorViewController.swift in Sources */,
 				16B8A6E420F04427001811E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

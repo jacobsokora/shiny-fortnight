@@ -8,12 +8,24 @@
 
 import UIKit
 
+struct Color {
+    let name: String
+    let color: UIColor
+}
+
 class ColorsTableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var colorNames: [String] = ["red", "orange", "yellow", "green", "blue", "purple", "brown"]
-    var colors: [UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .brown]
+    let colors = [
+        Color(name: "Red", color: .red),
+        Color(name: "Orange", color: .orange),
+        Color(name: "Yellow", color: .yellow),
+        Color(name: "Green", color: .green),
+        Color(name: "Blue", color: .blue),
+        Color(name: "Purple", color: .purple),
+        Color(name: "Brown", color: .brown)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +36,12 @@ class ColorsTableViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ColorViewController {
+            destination.color = colors[tableView.indexPathForSelectedRow?.row ?? 0]
+        }
     }
 
 }
@@ -39,8 +57,8 @@ extension ColorsTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath)
-        cell.textLabel?.text = colorNames[indexPath.row]
-        cell.backgroundColor = colors[indexPath.row]
+        cell.textLabel?.text = colors[indexPath.row].name
+        cell.backgroundColor = colors[indexPath.row].color
         return cell
     }
 }
